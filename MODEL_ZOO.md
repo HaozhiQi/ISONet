@@ -1,6 +1,6 @@
 # Model Zoo
 
-This file documents a collection of models reported in our paper (Deep Isometric Learning for Visual Recognition). All configurations for these baselines are located in the ```configs/``` directory. Links to the pretrained models are provided as well.
+This file documents a collection of models reported in our paper: [Deep Isometric Learning for Visual Recognition](https://arxiv.org/pdf/2006.16992.pdf). All configurations for these baselines are located in the ```configs/``` directory. Links to the pretrained models are provided as well.
 
 
 ### ISONet

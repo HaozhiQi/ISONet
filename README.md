@@ -9,7 +9,7 @@ This repository is an official PyTorch implementation of the ICML paper:
 [Yi Ma](http://people.eecs.berkeley.edu/~yima/),
 [Jitendra Malik](https://people.eecs.berkeley.edu/~malik/) <br>
 International Conference on Machine Learning (ICML), 2020 <br>
-[[Project Webpage](https://haozhiqi.github.io/ISONet)], [arXiv]
+[[Project Webpage](https://haozhiqi.github.io/ISONet)], [[arXiv](https://arxiv.org/abs/2006.16992)]
 
 ## Introduction
 
