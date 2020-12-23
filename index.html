@@ -12,10 +12,19 @@
     <style>
       body {
         font-family: Arial;
-        font-size:15px;
+        font-size:18px;
         margin: 60px auto;
         width: auto;
-        max-width: 900px;
+        max-width: 1200px;
+      }
+
+      a:link,a:visited
+      {
+        color: #0071bc;
+        text-decoration: none;
+      }
+      a:hover {
+        color: #208799;
       }
 
       hr {
@@ -50,41 +59,39 @@
 
   <div class="container">
 
-    <body>
-
     <center><span style="font-size:36px"> Deep Isometric Learning for Visual Recognition </span></center>
-    <div class="gap-5"></div>
+    <div class="gap-20"></div>
 
     <!--------------------- Author Names --------------------->
     <div class="row">
       <div class="col-md-1">
       </div>
       <div class="col-md-2">
-        <center><span style="font-size:16px">
+        <center><span style="font-size:18px font-weight:800">
           <a href="https://people.eecs.berkeley.edu/~hqi">Haozhi Qi<sup style="font-size:10px">1</sup></a>
         </span></center>
       </div>
 
       <div class="col-md-2">
-        <center><span style="font-size:16px">
+        <center><span style="font-size:18px font-weight:800">
           <a href="https://sites.google.com/view/cyou/">Chong You<sup style="font-size:10px">1</sup></a>
         </span></center>
       </div>
 
       <div class="col-md-2">
-        <center><span style="font-size:16px">
+        <center><span style="font-size:18px font-weight:800">
           <a href="https://xiaolonw.github.io">Xiaolong Wang<sup style="font-size:10px">12</sup></a>
         </span></center>
       </div>
 
       <div class="col-md-2">
-        <center><span style="font-size:16px">
+        <center><span style="font-size:18px font-weight:800">
           <a href="https://people.eecs.berkeley.edu/~yima">Yi Ma<sup style="font-size:10px">1</sup></a>
         </span></center>
       </div>
 
       <div class="col-md-2">
-        <center><span style="font-size:16px">
+        <center><span style="font-size:18px font-weight:800">
           <a href="https://people.eecs.berkeley.edu/~malik">Jitendra Malik<sup style="font-size:10px">1</sup></a>
         </span></center>
       </div>
@@ -118,20 +125,20 @@
       </div>
 
       <div class="col-md-2">
-        <center><span style="font-size:16px">
-          <a href="https://arxiv.org/abs/2006.16992">[arXiv]</a>
+        <center><span style="font-size:17px font-weight:800">
+          <a href="https://arxiv.org/abs/2006.16992">[Paper]</a>
         </span></center>
       </div>
 
       <div class="col-md-2">
-        <center><span style="font-size:16px">
-          <a href="https://github.com/HaozhiQi/ISONet">[code]</a>
+        <center><span style="font-size:17px font-weight:800">
+          <a href="https://github.com/HaozhiQi/ISONet">[Code]</a>
         </span></center>
       </div>
 
       <div class="col-md-2">
-        <center><span style="font-size:16px">
-          <a href="https://youtu.be/EmrVtAx8cNc">[video]</a>
+        <center><span style="font-size:17px font-weight:800">
+          <a href="https://youtu.be/EmrVtAx8cNc">[Video]</a>
         </span></center>
       </div>
 
@@ -141,40 +148,48 @@
     <!--------------------- teaser --------------------->
     <div class="gap-5"></div>
     <div class="img" style="text-align:center">
-      <img src="./figs/tfig1.png" style="margin:0.2em;max-width:95%">
-    </div>
-
-    <div class="gap-20"></div>
-    <div class="embed-responsive embed-responsive-16by9">
-    <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/EmrVtAx8cNc"
-            frameborder="0" allow="accelerometer; autoplay; encrypted-media;
-            gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <img src="./figs/tfig1.png" style="margin:0.2em;max-width:80%">
     </div>
 
     <!--------------------- abstract --------------------->
     <div class="gap-20"></div>
     <b><span style="font-size:20px">Abstract:</span></b><br>
-    <div class="gap-5"></div>
 
     <p> Initialization, normalization, and skip connections are believed to be three indispensable techniques for training very deep convolutional neural networks and obtaining state-of-the-art performance. This paper shows that deep vanilla ConvNets without normalization nor skip connections can also be trained to achieve surprisingly good performance on standard image recognition benchmarks. This is achieved by enforcing the convolution kernels to be near isometric during initialization and training, as well as by using a variant of ReLU that is shifted towards being isometric. Further experiments show that if combined with skip connections, such near isometric networks can achieve performances on par with (for ImageNet) and better than (for COCO) the standard ResNet, even without normalization at all. </p>
+
+    <div class="gap-5"></div>
+
+    <hr>
+
+    <!--------------------- Video --------------------->
+    <b><span style="font-size:20px">Video:</span></b><br>
+    <div class="gap-20"></div>
+    <div class="embed-responsive embed-responsive-16by9">
+    <iframe width="80%" class="embed-responsive-item" src="https://www.youtube.com/embed/EmrVtAx8cNc"
+            frameborder="0" allow="accelerometer; autoplay; encrypted-media;
+            gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+
+    <div class="gap-20"></div>
 
     <hr>
 
     <b><span style="font-size:20px">Methods:</span></b><br>
+
     <div class="gap-10"></div>
-    <span style="font-size:16px"> 1) At Initialization, Enforce Convolution Kernel to be an Identity.</span> <br>
+    <p> 1) At Initialization, Enforce Convolution Kernel to be an Identity. </p>
     <div class="img" style="text-align:center">
       <img src="./figs/tinit.png" style="margin:1em;max-width:95%">
     </div>
 
-    <span style="font-size:16px"> 2) During Training, Enforce Convolution Kernel to be orthogonal.</span> <br>
-    <div class="gap-5"></div>
+    <p> 2) During Training, Enforce Convolution Kernel to be orthogonal.</p>
+
     <div class="img" style="text-align:center">
       <img src="./figs/treg.png" style="margin:1em;max-width:95%">
     </div>
 
-    <span style="font-size:16px"> 3) Use Shifted ReLU (SReLU) to achieve a balance between isometry and nonlinearity.</span> <br>
-    <div class="gap-5"></div>
+    <p>  3) Use Shifted ReLU (SReLU) to achieve a balance between isometry and nonlinearity.</p>
+
     <div class="img" style="text-align:center">
       <img src="./figs/tsrelu.png" style="margin:1em;max-width:85%">
     </div>
@@ -183,17 +198,17 @@
 
     <b><span style="font-size:20px">Results:</span></b><br>
     <div class="gap-10"></div>
-    <span style="font-size:16px"> 1) ISONet: Isometry Enables Training Deep Vanilla Networks. </span><br>
+    <p>1) ISONet: Isometry Enables Training Deep Vanilla Networks.  </p>
 
     <div class="img" style="text-align:center">
       <img src="./figs/tISONet.png" style="margin:1.2em;max-width:95%">
     </div>
 
-    <span style="font-size:16px"> 2) R-ISONet: Deep Networks without Normalization. </span><br>
+     <p>  2) R-ISONet: Deep Networks without Normalization.  </p>
     <div class="img" style="text-align:center">
       <img src="./figs/tRISONet.png" style="margin:1em;max-width:95%">
     </div>
-    <span style="font-size:16px"> 3) R-ISONet Performs Better in Downstream Instance Recognition. </span><br>
+    <p> 3) R-ISONet Performs Better in Downstream Instance Recognition. </p>
     <div class="img" style="text-align:center">
       <img src="./figs/tDetection.png" style="margin:1em;max-width:95%">
     </div>
